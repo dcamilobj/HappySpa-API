@@ -14,6 +14,7 @@ exports.services_all_get = function (req, res){
 exports.service_detail_get = function(req, res){
   /*  res.send('Return one Spa service with id ' + req.params.id); */
   serviceModel.findAll({
+      attributes: ['id','name','image','happy'],
       where: {
           id: req.params.id
       }
